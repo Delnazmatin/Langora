@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌍 Langora
 
-## Getting Started
+Langora is a modern language learning web application built with **Next.js** and **TypeScript**. It provides a clean and intuitive interface for users to create an account, choose their target language and proficiency level, and manage their vocabulary learning journey.
 
-First, run the development server:
+## ✨ Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- 🔐 User Authentication
+  - Sign Up
+  - Log In
+  - Form validation with React Hook Form & Zod
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- 🌎 Language Selection
+  - Choose your learning language
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- 📚 Level Selection
+  - Beginner
+  - Elementary
+  - Intermediate
+  - Advanced
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- 📖 Dashboard
+  - Add new words
+  - Word Lists
+  - Flashcards _(Coming Soon)_
+  - Statistics _(Coming Soon)_
+  - Story Mode _(Coming Soon)_
 
-## Learn More
+- 📱 Responsive Design
+  - Mobile-first layout
+  - Tablet support
+  - Desktop support
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🛠️ Built With
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Next.js
+- React
+- TypeScript
+- React Hook Form
+- Zod
+- CSS3
+- React Icons
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 👩‍💻 Author
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+GitHub:
+https://github.com/Delnazmatin
+
+LinkedIn:
+https://www.linkedin.com/in/delnaz-pourmatin/
