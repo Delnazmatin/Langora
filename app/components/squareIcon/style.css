@@ -1,0 +1,38 @@
+.squareIconContainer {
+  width: 130px;
+  height: 130px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  color: black;
+  border-radius: 20px;
+  text-wrap: wrap;
+  padding: 15px;
+  margin: 5px;
+  text-align: center;
+  font-weight: bold;
+  box-shadow:
+    0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.squareIconContainer span {
+  font-size: 35px;
+}
+.squareIconContainer:hover {
+  opacity: 0.7;
+  border: 1px solid var(--soDarkGreen);
+}
+@media (min-width: 550px) {
+  .squareIconContainer {
+    width: 150px;
+    height: 150px;
+  }
+}
+@media (min-width: 700px) {
+  .squareIconContainer {
+    width: 170px;
+    height: 170px;
+  }
+}

@@ -1,0 +1,34 @@
+.addWordContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.addWordForm {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: var(--lightGreen);
+  margin-top: 15px;
+}
+.addWordForm label {
+  width: 100%;
+  display: block;
+}
+.areaInput textarea {
+  min-height: 80px;
+}
+.textInput input {
+  padding: 8px;
+}
+.areaInput textarea,
+.textInput input {
+  width: 250px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+.addButton {
+  align-self: center;
+}

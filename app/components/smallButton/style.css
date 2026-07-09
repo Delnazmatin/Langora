@@ -1,0 +1,14 @@
+.smallButton {
+  padding: 10px 20px;
+  width: 170px;
+  border-radius: 10px;
+  margin: 15px;
+  background-color: var(--midGreen);
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+}
+.smallButton:hover {
+  background-color: rgb(145, 145, 206);
+  color: black;
+}
