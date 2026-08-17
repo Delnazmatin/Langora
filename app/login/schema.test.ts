@@ -1,7 +1,7 @@
 import { describe, expect, test } from "vitest";
 import { signinSchema } from "./schema";
 
-describe("signinSchema", () => {
+describe("signin Schema", () => {
   test("accepts valid login data", () => {
     const result = signinSchema.safeParse({
       email: "test@example.com",
