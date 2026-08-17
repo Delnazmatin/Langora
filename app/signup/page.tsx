@@ -6,35 +6,37 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import Image from "next/image";
 import signupLogo from "@/app/assets/images/signupLogo.jpg";
-import Link from "next/link";
+import { useRouter } from "next/navigation";
+
+const signupSchema = z
+  .object({
+    email: z
+      .string()
+      .min(1, "Email is required")
+      .email("Invalid email address"),
+    phoneNumber: z
+      .string()
+      .min(1, "phone number is required")
+      .regex(/^(?:\+98|98|0)?9\d{9}$/, "Phone number is invalid"),
+    password: z
+      .string()
+      .min(1, "Password is required")
+      .min(8, "Password must be at least 8 characters"),
+    confirmPassword: z
+      .string()
+      .min(1, "Confirm password is required")
+      .min(8, "Confirm Password must be at least 8 characters"),
+    age: z.number({ message: "age is required" }),
+  })
+  .refine((data) => data.password === data.confirmPassword, {
+    message: "password do not match",
+    path: ["confirmPassword"],
+  });
+
+type SignupType = z.infer<typeof signupSchema>;
 
 export default function SignUp() {
-  const signupSchema = z
-    .object({
-      email: z
-        .string()
-        .min(1, "Email is required")
-        .email("Invalid email address"),
-      phoneNumber: z
-        .string()
-        .min(1, "phone number is required")
-        .regex(/^(?:\+98|98|0)?9\d{9}$/, "Phone number is invalid"),
-      password: z
-        .string()
-        .min(1, "Password is required")
-        .min(8, "Password must be at least 8 characters"),
-      confirmPassword: z
-        .string()
-        .min(1, "Confirm password is required")
-        .min(8, "Confirm Password must be at least 8 characters"),
-      age: z.number({ message: "age is required" }),
-    })
-    .refine((data) => data.password === data.confirmPassword, {
-      message: "password do not match",
-      path: ["confirmPassword"],
-    });
-
-  type SignupType = z.infer<typeof signupSchema>;
+  const router = useRouter();
 
   const {
     register,
@@ -49,6 +51,7 @@ export default function SignUp() {
   function onSubmit(data: SignupType) {
     console.log(data);
     reset();
+    router.push("/dashboard");
   }
 
   return (
@@ -118,11 +121,9 @@ export default function SignUp() {
           />
           {errors.age && <p className="warningMessage">{errors.age.message}</p>}
         </div>
-        <Link href="/chooseLanguage">
-          <div className="signupButtonContainer">
-            <BigButton text="Sign up" />
-          </div>
-        </Link>
+        <div className="signupButtonContainer">
+          <BigButton text="Sign up" />
+        </div>
       </form>
     </div>
   );

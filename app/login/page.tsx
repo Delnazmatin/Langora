@@ -6,10 +6,11 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import Image from "next/image";
 import loginLogo from "@/app/assets/images/loginLogo.jpg";
-import Link from "next/link";
 import { LoginType, signinSchema } from "./schema";
+import { useRouter } from "next/navigation";
 
 export default function Login() {
+  const router = useRouter();
   const {
     register,
     handleSubmit,
@@ -23,6 +24,8 @@ export default function Login() {
   function onSubmit(data: LoginType) {
     console.log(data);
     reset();
+
+    router.push("/dashboard");
   }
 
   return (
@@ -57,9 +60,7 @@ export default function Login() {
         </div>
 
         <div className="loginButtonContainer">
-          {/* <Link href="/dashboard"> */}
           <BigButton text="Log In" />
-          {/* </Link> */}
         </div>
       </form>
     </div>
