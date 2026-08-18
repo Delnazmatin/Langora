@@ -5,17 +5,26 @@ import { LanguageType } from "@/app/data/dataOfCountry";
 import Image from "next/image";
 import LanguageLogo from "@/app/assets/images/languageLogo.jpg";
 import BigButton from "../components/bigButton/BigButton";
-import Link from "next/link";
 import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 
 export default function ChooseLanguage() {
   const [country, setCountry] = useState<string>("");
+  const route = useRouter();
 
   useEffect(() => {
     if (country) {
       alert(`Language: ${country}`);
     }
   }, [country]);
+
+  function handleContinue() {
+    if (!country) {
+      return;
+    }
+    route.push("/setLevel");
+  }
+
   return (
     <div className="chooseLanguageContainer">
       <div className="chooseLanguageContent">
@@ -46,9 +55,12 @@ export default function ChooseLanguage() {
           </ul>
         </div>
         <div className="chooseLanguageButton">
-          <Link href="/setLevel">
-            <BigButton text="Continue" />
-          </Link>
+          <BigButton
+            text="Continue"
+            type="submit"
+            onClick={handleContinue}
+            disabled={!country}
+          />
         </div>
       </div>
     </div>

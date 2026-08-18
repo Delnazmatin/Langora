@@ -24,7 +24,7 @@ export default function SignUp() {
   function onSubmit(data: SignupType) {
     console.log(data);
     reset();
-    router.push("/dashboard");
+    router.push("/chooseLanguage");
   }
 
   return (
@@ -95,7 +95,7 @@ export default function SignUp() {
           {errors.age && <p className="warningMessage">{errors.age.message}</p>}
         </div>
         <div className="signupButtonContainer">
-          <BigButton text="Sign up" />
+          <BigButton text="Sign up" type="submit" />
         </div>
       </form>
     </div>

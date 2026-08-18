@@ -3,17 +3,25 @@ import "@/app/setLevel/style.css";
 import Image from "next/image";
 import { FaCircle, FaRegCircle } from "react-icons/fa";
 import LevelLogo from "@/app/assets/images/levelLogo.jpg";
-import Link from "next/link";
 import BigButton from "../components/bigButton/BigButton";
 import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
+
 export default function SetLevel() {
   const [level, setLevel] = useState<string>("");
-
+  const route = useRouter();
   useEffect(() => {
     if (level) {
       alert(`Level: ${level}`);
     }
   }, [level]);
+
+  function handleContinue() {
+    if (!level) {
+      return;
+    }
+    route.push("/dashboard");
+  }
 
   return (
     <div className="levelContainer">
@@ -78,9 +86,13 @@ export default function SetLevel() {
             <FaCircle />
           </span>
         </div>
-        <Link href="/dashboard">
-          <BigButton text="Continue" />
-        </Link>
+
+        <BigButton
+          text="Continue"
+          type="button"
+          onClick={handleContinue}
+          disabled={!level}
+        />
       </div>
     </div>
   );

@@ -3,10 +3,6 @@ import BigButton from "./components/bigButton/BigButton";
 import Image from "next/image";
 import startLogo from "@/app/assets/images/startLogo.jpg";
 
-export type ButtonProps = {
-  text: string;
-};
-
 export default function Home() {
   return (
     <div className="container">
@@ -17,10 +13,10 @@ export default function Home() {
 
       <div className="startButtonContainer">
         <Link href="/signup">
-          <BigButton text="Get Start" />
+          <BigButton text="Get Start" type="button" />
         </Link>
         <Link href="/login">
-          <BigButton text="I already have an account" />
+          <BigButton text="I already have an account" type="button" />
         </Link>
       </div>
     </div>
