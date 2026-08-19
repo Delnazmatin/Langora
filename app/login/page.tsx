@@ -60,7 +60,7 @@ export default function Login() {
         </div>
 
         <div className="loginButtonContainer">
-          <BigButton text="Log In" type="submit" />
+          <BigButton text="Login" type="submit" />
         </div>
       </form>
     </div>

@@ -1,4 +1,4 @@
-import "@/app/components/bigButton/style.css";
+import "./style.css";
 
 type BigButtonType = {
   text: string;
