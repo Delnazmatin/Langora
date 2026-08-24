@@ -1,0 +1,37 @@
+.boxContent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px;
+  width: 100%;
+}
+.boxContainer ul {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+.boxContainer li {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.boxContainer li:hover {
+  border: 1px solid rgb(95, 95, 95);
+}
+.boxContainer span {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

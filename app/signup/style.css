@@ -6,13 +6,13 @@
   flex: 1;
   justify-content: center;
   align-items: center;
+  background-color: var(--backgroundColor);
 }
 .signupContainer h1 {
   font-weight: bold;
   font-size: 30px;
 }
 .signupContainer form {
-  background-color: white;
   min-height: auto;
   width: 400px;
   display: flex;
@@ -53,8 +53,14 @@
   height: auto;
 }
 @media (min-width: 500px) {
+  .signupContainer {
+    background-color: white;
+  }
   .signupContainer form {
-    border: 1px solid gray;
+    box-shadow:
+      0 4px 8px 0 rgba(0, 0, 0, 0.2),
+      0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: var(--backgroundColor);
     height: 750px;
   }
 }

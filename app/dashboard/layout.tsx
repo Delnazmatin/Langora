@@ -1,8 +1,5 @@
 import "@/app/dashboard/style.css";
 import Navbar from "../components/navbar/navbar";
-import Link from "next/link";
-import { IoPersonOutline } from "react-icons/io5";
-
 export default function DashboardLayout({
   children,
 }: {
@@ -12,16 +9,12 @@ export default function DashboardLayout({
     <div className="dashboardContainer">
       <div className="dashboardContent">
         <div className="dashboardHeader">
-          <Link href="">
-            <span className="profileIcon">
-              <IoPersonOutline />
-            </span>
-          </Link>
+          <h2>Langora</h2>
         </div>
         <div className="dashboardMain">{children}</div>
-        <div className="navDashboard">
+        <footer className="navDashboard">
           <Navbar />
-        </div>
+        </footer>
       </div>
     </div>
   );

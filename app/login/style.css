@@ -6,6 +6,7 @@
   flex: 1;
   justify-content: center;
   align-items: center;
+  background-color: var(--backgroundColor);
 }
 .loginContainer h1 {
   font-weight: bold;
@@ -13,7 +14,6 @@
   margin: 10px 0px 30px;
 }
 .loginContainer form {
-  background-color: white;
   min-height: 500px;
   width: 400px;
   display: flex;
@@ -54,7 +54,13 @@
   height: auto;
 }
 @media (min-width: 500px) {
+  .loginContainer {
+    background-color: white;
+  }
   .loginContainer form {
-    border: 1px solid gray;
+    box-shadow:
+      0 4px 8px 0 rgba(0, 0, 0, 0.2),
+      0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: var(--backgroundColor);
   }
 }

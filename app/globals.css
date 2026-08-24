@@ -5,7 +5,10 @@
   --midGreen: #249e94;
   --darkGreen: #0c7779;
   --soDarkGreen: #005461;
-  --backgroundColor: #f8f8ff;
+  --backgroundColor: #f7f9fc;
+  --gray: #cbd5e0;
+  --text: #2d3a4a;
+  --iconColor: #669eae;
 }
 html {
   height: 100%;
@@ -39,6 +42,10 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
+  box-shadow:
+    0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: var(--backgroundColor);
 }
 .logoOfStartPage img {
   width: 15rem;

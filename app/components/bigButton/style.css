@@ -1,11 +1,12 @@
 .bigButton {
   padding: 15px;
-  width: 300px;
+  width: 290px;
   border-radius: 30px;
   margin: 5px;
   background-color: var(--lightGreen);
-  color: black;
+  color: white;
   border: none;
+  font-weight: bold;
 }
 .bigButton:hover {
   background-color: var(--darkGreen);

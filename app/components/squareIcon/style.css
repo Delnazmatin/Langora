@@ -1,6 +1,6 @@
 .squareIconContainer {
-  width: 130px;
-  height: 130px;
+  width: 120px;
+  height: 120px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,7 +10,6 @@
   border-radius: 20px;
   text-wrap: wrap;
   padding: 15px;
-  margin: 5px;
   text-align: center;
   font-weight: bold;
   box-shadow:
@@ -24,15 +23,9 @@
   opacity: 0.7;
   border: 1px solid var(--soDarkGreen);
 }
-@media (min-width: 550px) {
+@media (min-width: 400px) {
   .squareIconContainer {
-    width: 150px;
-    height: 150px;
-  }
-}
-@media (min-width: 700px) {
-  .squareIconContainer {
-    width: 170px;
-    height: 170px;
+    width: 140px;
+    height: 140px;
   }
 }

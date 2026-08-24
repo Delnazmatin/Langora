@@ -7,11 +7,11 @@
 .addWordForm {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  padding: 20px;
+  align-items: center;
+  padding: 10px;
   border-radius: 5px;
-  background-color: var(--lightGreen);
   margin-top: 15px;
+  width: 100%;
 }
 .addWordForm label {
   width: 100%;
@@ -19,16 +19,22 @@
 }
 .areaInput textarea {
   min-height: 80px;
+  border: 0.5px solid gray;
 }
 .textInput input {
   padding: 8px;
+  border: 0.5px solid gray;
 }
 .areaInput textarea,
 .textInput input {
-  width: 250px;
-  border-radius: 5px;
+  width: 280px;
+  border-radius: 10px;
   margin-bottom: 20px;
 }
 .addButton {
   align-self: center;
+  margin-top: 10px;
+}
+.boxContainer {
+  width: 100%;
 }

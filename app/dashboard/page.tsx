@@ -7,15 +7,9 @@ export default function Dashboard() {
     <div className="squareContainer">
       {MainMenu.map((item) => {
         return (
-          <>
-            <Link href={`/dashboard/${item.href}`} key={item.href}>
-              <SquareIcon
-                name={item.name}
-                color={item.color}
-                icon={item.icon}
-              />
-            </Link>
-          </>
+          <Link href={`/dashboard/${item.href}`} key={item.href}>
+            <SquareIcon name={item.name} color={item.color} icon={item.icon} />
+          </Link>
         );
       })}
     </div>

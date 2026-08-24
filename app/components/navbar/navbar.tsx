@@ -4,36 +4,43 @@ import {
   IoSettingsOutline,
   IoGridOutline,
   IoHomeOutline,
+  IoPersonOutline,
 } from "react-icons/io5";
 
 export default function Navbar() {
   return (
-    <div className="navbarContainer">
-      <ul>
-        <Link href="">
-          <li>
-            <span className="navIcon">
-              <IoSettingsOutline />
-            </span>
-          </li>
-        </Link>
+    <ul className="navbarContainer">
+      <Link href="">
+        <li>
+          <span className="navIcon">
+            <IoPersonOutline />
+          </span>
+        </li>
+      </Link>
 
-        <Link href="">
-          <li>
-            <span className="navIcon">
-              <IoGridOutline />
-            </span>
-          </li>
-        </Link>
+      <Link href="">
+        <li>
+          <span className="navIcon">
+            <IoSettingsOutline />
+          </span>
+        </li>
+      </Link>
 
-        <Link href="">
-          <li>
-            <span className="navIcon">
-              <IoHomeOutline />
-            </span>
-          </li>
-        </Link>
-      </ul>
-    </div>
+      <Link href="">
+        <li>
+          <span className="navIcon">
+            <IoGridOutline />
+          </span>
+        </li>
+      </Link>
+
+      <Link href="">
+        <li>
+          <span className="navIcon">
+            <IoHomeOutline />
+          </span>
+        </li>
+      </Link>
+    </ul>
   );
 }

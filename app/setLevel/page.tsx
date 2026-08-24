@@ -1,11 +1,11 @@
 "use client";
 import "@/app/setLevel/style.css";
 import Image from "next/image";
-import { FaCircle, FaRegCircle } from "react-icons/fa";
 import LevelLogo from "@/app/assets/images/levelLogo.jpg";
 import BigButton from "../components/bigButton/BigButton";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+import { PiStarBold } from "react-icons/pi";
 
 export default function SetLevel() {
   const [level, setLevel] = useState<string>("");
@@ -36,13 +36,10 @@ export default function SetLevel() {
             setLevel("Beginner");
           }}
         >
-          <span>Beginner</span>
           <span>
-            <FaCircle />
-            <FaRegCircle />
-            <FaRegCircle />
-            <FaRegCircle />
+            <PiStarBold />
           </span>
+          <span>Beginner</span>
         </div>
         <div
           className="levels level2"
@@ -50,13 +47,11 @@ export default function SetLevel() {
             setLevel("Elementary");
           }}
         >
-          <span>Elementary</span>
           <span>
-            <FaCircle />
-            <FaCircle />
-            <FaRegCircle />
-            <FaRegCircle />
+            <PiStarBold />
+            <PiStarBold />
           </span>
+          <span>Elementary</span>
         </div>
         <div
           className="levels level3"
@@ -64,13 +59,12 @@ export default function SetLevel() {
             setLevel("Intermediate");
           }}
         >
-          <span>Intermediate</span>
           <span>
-            <FaCircle />
-            <FaCircle />
-            <FaCircle />
-            <FaRegCircle />
+            <PiStarBold />
+            <PiStarBold />
+            <PiStarBold />
           </span>
+          <span>Intermediate</span>
         </div>
         <div
           className="levels level4"
@@ -78,13 +72,13 @@ export default function SetLevel() {
             setLevel("Advanced");
           }}
         >
-          <span>Advanced</span>
           <span>
-            <FaCircle />
-            <FaCircle />
-            <FaCircle />
-            <FaCircle />
+            <PiStarBold />
+            <PiStarBold />
+            <PiStarBold />
+            <PiStarBold />
           </span>
+          <span>Advanced</span>
         </div>
 
         <BigButton

@@ -3,6 +3,16 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  flex: 1;
+  background-color: var(--backgroundColor);
+}
+.chooseLanguageContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 320px;
+  height: auto;
+  padding: 20px;
 }
 .chooseLanguageLogo {
   text-align: center;
@@ -12,36 +22,29 @@
   text-align: center;
   margin: 0px 0px 20px;
 }
-.chooseLanguageContent {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 340px;
-  min-height: 400px;
-  margin: 40px;
-}
 .languageContainer ul {
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
   width: 300px;
 }
 .languageContainer li {
-  width: 250px;
+  width: 120px;
+  font-size: 12px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-self: center;
-  border-radius: 5px;
+  border-radius: 10px;
   border: 0.5px solid lightgray;
-  margin: 10px;
-  padding: 0px 10px;
+  margin: 5px;
+  padding: 0px 5px;
 }
 .languageContainer li:hover {
   background-color: var(--lightGreen);
 }
 .countryFlag {
-  font-size: 40px;
+  font-size: 35px;
   width: 20%;
 }
 .countryName {
@@ -50,23 +53,23 @@
   text-align: center;
 }
 .chooseLanguageButton {
-  margin: 10px 0px;
+  margin: 20px 0px;
 }
 
-@media (min-width: 550px) {
-  .languageContainer ul {
-    grid-template-columns: repeat(auto-fill, minmax(250px, 2fr));
-    width: 500px;
-  }
-  .languageContainer li {
-    width: 180px;
+@media (min-width: 400px) {
+  .chooseLanguageContainer {
+    background-color: white;
   }
   .chooseLanguageContent {
-    width: 500px;
-    min-height: 630px;
+    box-shadow:
+      0 4px 8px 0 rgba(0, 0, 0, 0.2),
+      0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 20px;
+    background-color: var(--backgroundColor);
+    width: 380px;
   }
-  .countryFlag {
-    width: 30%;
-    text-align: center;
+  .languageContainer li {
+    width: 140px;
+    font-size: 16px;
   }
 }

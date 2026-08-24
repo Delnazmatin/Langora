@@ -1,9 +1,10 @@
 import type { IconType } from "react-icons";
 import { LuClipboardList } from "react-icons/lu";
 import { IoMdAdd } from "react-icons/io";
-import { MdFormatListBulletedAdd } from "react-icons/md";
+import { MdFormatListBulletedAdd, MdOutlineQuiz } from "react-icons/md";
 import { LuChartNoAxesCombined } from "react-icons/lu";
 import { PiBookDuotone } from "react-icons/pi";
+import { FiRepeat, FiSliders } from "react-icons/fi";
 
 export type MainMenuType = {
   name: string;
@@ -37,9 +38,27 @@ export const MainMenu: MainMenuType[] = [
     icon: LuChartNoAxesCombined,
   },
   {
-    name: "Story",
-    href: "Story",
-    color: "#E25314",
+    name: "Add Grammar",
+    href: "addGrammar",
+    color: "#FA6261",
     icon: PiBookDuotone,
+  },
+  {
+    name: "Weakly Review",
+    href: "weaklyReview",
+    color: "#E25314",
+    icon: FiRepeat,
+  },
+  {
+    name: "Set up",
+    href: "setup",
+    color: "#FFCA73",
+    icon: FiSliders,
+  },
+  {
+    name: "Quiz",
+    href: "quiz",
+    color: "#7FDEA7",
+    icon: MdOutlineQuiz,
   },
 ];
