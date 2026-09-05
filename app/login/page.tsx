@@ -1,11 +1,11 @@
 "use client";
 
-import "@/app/login/style.css";
-import BigButton from "@/app/components/bigButton/BigButton";
+import "./style.css";
+import BigButton from "../components/bigButton/BigButton";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import Image from "next/image";
-import loginLogo from "@/app/assets/images/loginLogo.jpg";
+import loginLogo from "../assets/images/loginLogo.jpg";
 import { LoginType, signinSchema } from "./schema";
 import { useRouter } from "next/navigation";
 
@@ -34,8 +34,11 @@ export default function Login() {
         <Image src={loginLogo} alt="logo" width={50} height={50} />
         <h1>Login to your account</h1>
         <div className="inputContainer">
-          <label className="loginLabel">Email</label>
+          <label className="loginLabel" htmlFor="email">
+            Email
+          </label>
           <input
+            id="email"
             type="email"
             placeholder="you@mail.com"
             className="loginInput"
@@ -47,8 +50,11 @@ export default function Login() {
         </div>
 
         <div className="inputContainer">
-          <label className="loginLabel">Password</label>
+          <label className="loginLabel" htmlFor="password">
+            Password
+          </label>
           <input
+            id="password"
             type="password"
             placeholder="Password"
             className="loginInput"

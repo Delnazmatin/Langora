@@ -1,10 +1,10 @@
 "use client";
-import "@/app/signup/style.css";
-import BigButton from "@/app/components/bigButton/BigButton";
+import "./style.css";
+import BigButton from "../components/bigButton/BigButton";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import Image from "next/image";
-import signupLogo from "@/app/assets/images/signupLogo.jpg";
+import signupLogo from "../assets/images/signupLogo.jpg";
 import { useRouter } from "next/navigation";
 import { signupSchema, SignupType } from "./schema";
 
@@ -33,8 +33,11 @@ export default function SignUp() {
         <Image src={signupLogo} alt="logo" width={50} height={50} />
         <h1>Sign Up</h1>
         <div className="inputContainer">
-          <label className="signupLabel">Email</label>
+          <label className="signupLabel" htmlFor="email">
+            Email
+          </label>
           <input
+            id="email"
             className="signupInput"
             type="email"
             placeholder="you@mail.com"
@@ -46,8 +49,11 @@ export default function SignUp() {
         </div>
 
         <div className="inputContainer">
-          <label className="signupLabel">Phone number </label>
+          <label className="signupLabel" htmlFor="phoneNumber">
+            Phone number
+          </label>
           <input
+            id="phoneNumber"
             className="signupInput"
             type="tel"
             placeholder="09123456789"
@@ -59,8 +65,11 @@ export default function SignUp() {
         </div>
 
         <div className="inputContainer">
-          <label className="signupLabel">Password</label>
+          <label className="signupLabel" htmlFor="password">
+            Password
+          </label>
           <input
+            id="password"
             className="signupInput"
             type="password"
             placeholder="password"
@@ -72,8 +81,11 @@ export default function SignUp() {
         </div>
 
         <div className="inputContainer">
-          <label className="signupLabel">Confirm Password</label>
+          <label className="signupLabel" htmlFor="confirmPassword">
+            Confirm Password
+          </label>
           <input
+            id="confirmPassword"
             className="signupInput"
             type="password"
             placeholder="confirm password"
@@ -85,8 +97,11 @@ export default function SignUp() {
         </div>
 
         <div className="inputContainer">
-          <label className="signupLabel">Age</label>
+          <label className="signupLabel" htmlFor="age">
+            Age
+          </label>
           <input
+            id="age"
             className="signupInput"
             type="number"
             placeholder="age"
