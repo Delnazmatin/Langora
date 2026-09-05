@@ -1,7 +1,7 @@
 import Link from "next/link";
 import BigButton from "./components/bigButton/BigButton";
 import Image from "next/image";
-import startLogo from "@/app/assets/images/startLogo.jpg";
+import startLogo from "@/app/assets/images/startLogo.jpeg";
 
 export default function Home() {
   return (

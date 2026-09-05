@@ -4,7 +4,7 @@ import BigButton from "../components/bigButton/BigButton";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import Image from "next/image";
-import signupLogo from "../assets/images/signupLogo.jpg";
+import signupLogo from "../assets/images/signupLogo.jpeg";
 import { useRouter } from "next/navigation";
 import { signupSchema, SignupType } from "./schema";
 

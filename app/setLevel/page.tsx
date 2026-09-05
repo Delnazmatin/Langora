@@ -1,7 +1,7 @@
 "use client";
 import "@/app/setLevel/style.css";
 import Image from "next/image";
-import LevelLogo from "@/app/assets/images/levelLogo.jpg";
+import LevelLogo from "@/app/assets/images/levelLogo.jpeg";
 import BigButton from "../components/bigButton/BigButton";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";

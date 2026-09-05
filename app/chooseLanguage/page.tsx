@@ -3,7 +3,7 @@ import "@/app/chooseLanguage/style.css";
 import { languages } from "@/app/data/dataOfCountry";
 import { LanguageType } from "@/app/data/dataOfCountry";
 import Image from "next/image";
-import LanguageLogo from "@/app/assets/images/languageLogo.jpg";
+import LanguageLogo from "@/app/assets/images/languageLogo.jpeg";
 import BigButton from "../components/bigButton/BigButton";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
